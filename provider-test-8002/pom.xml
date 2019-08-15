@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>provider-test-8001</artifactId>
+    <artifactId>provider-test-8002</artifactId>
     <description>部门微服务生产者</description>
 
     <dependencies>
