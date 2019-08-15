@@ -1,5 +1,7 @@
 package com.test.consumer.config;
 
+import com.netflix.loadbalancer.BestAvailableRule;
+import com.netflix.loadbalancer.IRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,5 +14,13 @@ public class ConfigBean {
     @LoadBalanced
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
+    }
+
+    /**
+     * 自定义轮询算法
+     */
+    @Bean
+    public IRule ribbonRule() {
+        return new BestAvailableRule();
     }
 }
