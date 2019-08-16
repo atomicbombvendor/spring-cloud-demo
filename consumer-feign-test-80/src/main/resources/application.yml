@@ -1,11 +1,11 @@
 server:
-  port: 80
+  port: 81
 rest:
   url:
     prefix: http://PROVIDER-DEPT
 spring:
   application:
-    name: consumer-dept                        # 对外暴露的微服务名字
+    name: consumer-feign-dept                        # 对外暴露的微服务名字
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:

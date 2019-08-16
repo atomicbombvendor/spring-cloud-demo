@@ -13,7 +13,7 @@ public class MyRule extends AbstractLoadBalancerRule {
     /**
      * Randomly choose from all living servers
      */
-    @edu.umd.cs.findbugs.annotations.SuppressWarnings(value = "RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE")
+//    @edu.umd.cs.findbugs.annotations.SuppressWarnings(value = "RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE")
     public Server choose(ILoadBalancer lb, Object key) {
         if (lb == null) {
             return null;

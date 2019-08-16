@@ -29,13 +29,14 @@
         <java.version>1.8</java.version>
         <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
+        <spring-cloud-start.version>1.4.7.RELEASE</spring-cloud-start.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.16.18</lombok.version>
-        <spring-cloud-start.version>1.4.7.RELEASE</spring-cloud-start.version>
+
     </properties>
 
     <dependencies>
