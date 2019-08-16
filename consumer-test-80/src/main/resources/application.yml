@@ -16,5 +16,5 @@ eureka:
 info:
   app.name: microservicecloud
   company.name: com.demo.test
-  build.artifactId: $project.artifactId$
+  build.artifactId: ${eureka.client.instance.instance-id}
   build.version: $project.version$
