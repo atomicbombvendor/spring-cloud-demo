@@ -17,6 +17,7 @@ public class DeptController_Feign {
 
     @RequestMapping(value = "/fconsumer/dept/get/{id}")
     public Dept get(@PathVariable("id") Long id) {
+        System.out.println("DeptController_Feign get " + id);
         return this.deptClientService.get(id);
     }
 

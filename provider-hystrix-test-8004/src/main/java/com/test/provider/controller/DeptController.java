@@ -1,6 +1,7 @@
 package com.test.provider.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.test.api.entity.Dept;
 import com.test.provider.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,13 @@ public class DeptController {
     }
 
     @GetMapping(value = "/dept/get/{id}")
+    @HystrixCommand(fallbackMethod = "processHystrix_Get")
     public Dept get(@PathVariable("id") Long id) {
+
+        System.out.println("DeptProviderController get " + id);
+        if (id > 10){
+            throw new RuntimeException("Id is more than 10");
+        }
         return service.get(id);
     }
 
@@ -45,4 +52,12 @@ public class DeptController {
 
         return this.discoveryClient;
     }
+
+    public Dept processHystrix_Get(@PathVariable("id") Long id) {
+        System.out.println("DeptProviderController processHystrix_Get get " + id);
+        return new Dept().setDeptNo(id)
+                .setDname("该ID："+id+"没有没有对应的信息,null--@HystrixCommand")
+                .setDb_source("no this database in MySQL");
+    }
+
 }

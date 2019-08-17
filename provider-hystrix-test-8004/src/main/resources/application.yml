@@ -31,5 +31,6 @@ eureka:
 info:
   app.name: microservicecloud
   company.name: com.demo.test
-  build.artifactId: ${eureka.client.instance.instance-id}:${spring.application.instance_id}
-  build.version: 0.0.1
+  build:
+    artifactId: ${eureka.client.instance.instance-id}
+    version: 0.0.1

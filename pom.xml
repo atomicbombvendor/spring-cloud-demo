@@ -21,8 +21,13 @@
     <modules>
         <module>api-test</module>
         <module>provider-test-8001</module>
+        <module>provider-test-8002</module>
+        <module>provider-test-8003</module>
         <module>consumer-test-80</module>
         <module>eureka-7001</module>
+        <module>eureka-7002</module>
+        <module>eureka-7003</module>
+        <module>consumer-feign-test-80</module>
     </modules>
 
     <properties>
