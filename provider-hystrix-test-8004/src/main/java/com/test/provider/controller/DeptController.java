@@ -29,11 +29,11 @@ public class DeptController {
     @HystrixCommand(fallbackMethod = "processHystrix_Get")
     public Dept get(@PathVariable("id") Long id) {
 
-        System.out.println("DeptProviderController get " + id);
-        if (id > 10){
+        Dept dept = service.get(id);
+        if (dept == null){
             throw new RuntimeException("Id is more than 10");
         }
-        return service.get(id);
+        return dept;
     }
 
     @GetMapping(value = "/dept/list")

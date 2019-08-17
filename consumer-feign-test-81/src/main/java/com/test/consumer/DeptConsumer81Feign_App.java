@@ -10,9 +10,9 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableEurekaClient
 @EnableFeignClients(basePackages= {"com.test"})
 @ComponentScan("com.test")
-public class DeptConsumer80Feign_App {
+public class DeptConsumer81Feign_App {
 
     public static void main(String[] args) {
-        SpringApplication.run(DeptConsumer80Feign_App.class, args);
+        SpringApplication.run(DeptConsumer81Feign_App.class, args);
     }
 }
