@@ -21,3 +21,9 @@ info:
 feign:
   hystrix:
     enabled: true
+# 熔断器DashBoard: actuator在boot2.0调整后开关web端点的配置，*代表开启所有
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -34,3 +34,9 @@ info:
   build:
     artifactId: ${eureka.client.instance.instance-id}
     version: 0.0.1
+# 熔断器DashBoard: actuator在boot2.0调整后开关web端点的配置，*代表开启所有
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
