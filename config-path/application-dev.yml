@@ -1,0 +1,6 @@
+test:
+  spring-boot:
+    version: 2.1.7.dev
+  demo:
+    version: 0.0.2.dev
+  artificatId: com.test.demo.dev
