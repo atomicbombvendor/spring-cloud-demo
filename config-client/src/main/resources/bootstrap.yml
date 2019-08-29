@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: microservicecloud-config-client # 请求的配置文件名
+      profile: dev # profile类型 dev:port 8201; test:port 8202;
+      label: master # 分支
+      uri: http://localhost:3365 # 配置的config-server

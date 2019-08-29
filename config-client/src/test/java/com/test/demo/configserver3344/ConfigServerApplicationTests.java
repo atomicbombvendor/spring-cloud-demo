@@ -1,4 +1,4 @@
-package com.test.configserver;
+package com.test.demo.configserver3344;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

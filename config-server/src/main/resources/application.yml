@@ -1,0 +1,12 @@
+server:
+  port: 3365
+spring:
+  application:
+    name:  microservicecloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/atomicbombvendor/test-spring-boot-config.git
+
+

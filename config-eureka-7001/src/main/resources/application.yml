@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: microservicecloud-config-client22 # 和配置文件的配置不一样
